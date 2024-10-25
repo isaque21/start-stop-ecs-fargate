@@ -12,15 +12,14 @@ Create an IAM role and attach the following managed policies (or a custom policy
 - CloudWatchFullAccessV2
 
 
-
 # Instructions
 
-- First, you need to define the following tags with their keys and values on ECS Services:
+First, you need to define the following tags with their keys and values on ECS Services:
 
-    - Scheduled       : Active
-    - Period-1        : Monday-Friday
-    - ScheduleStart-1 : 08:00
-    - ScheduleStop-1  : 18:00
+    Scheduled       : Active
+    Period-1        : Monday-Friday
+    ScheduleStart-1 : 08:00
+    ScheduleStop-1  : 18:00
 
 ##
 
@@ -36,13 +35,13 @@ Create an IAM role and attach the following managed policies (or a custom policy
 
 The code makes use of two environment variables:
 
-### ALARMS_MANAGER
+    ALARMS_MANAGER
 
 Defines whether CloudWatch alarms for instances will be enabled/disabled along with the start/stop action.
 
 The key value True defines that the function will change the status of alarms. If you do not want to change the status of the alarms, change the value to False.
 
-### REGIONS
+    REGIONS
 
 Defines the regions that the function will traverse and list instances.
 
